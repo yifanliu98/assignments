@@ -1,0 +1,55 @@
+Part 1
+
+Instructions
+
+(1) Because threads share memory space but multiple processes.
+
+(2) It prevents thread execution when swap is working.
+	In function wait_till_done(), we use workperformed as a flag to check if string[i] > string[i+1]
+
+(3) fp is a pointer pointing to the function whose parameter is type of void*
+
+part II
+
+(1) Enzyme threads will be end after running if we detach any of the enzyme threads. 	 Yes
+
+(2) To run other threads, we need to use sched_yield.
+	If sched_yield is not used, we can not run all threads.
+	No, the swqp counts are not identical.
+
+(3) Because we do not count these strings to the total number of swaps
+
+(4) It is deadlock
+
+(5) First, it waits for seconds and then print the state and exit the thread
+
+(6) To cancel thread at any time
+
+(7) The info is out of loop, so it only runs once
+
+Part 2
+
+Q1: 1+2*3
+    We will get 9 if running add first and get 7 if running multiple first
+
+Q2: Yes, the program will generate correct output. Becuase we run multiple, add, and degroup in order
+
+Q3: All data structures should be protect because threads share memory space when running
+
+Q4: It is not good enough to use busy-wait within one of the critical sections.
+
+Q5: pthread_mutex_trylock() is trying to lock a mutex object. If it is locked already, it will returns immediately.
+
+Q6: Yes, it requires a correctly implement
+
+Q7: It will be time-consuming and memory-consuming if the critical sections are big
+
+Q8: Because yield can impove the program on efficiency. It can let other threads run when there is a thread waiting
+
+Q9: #https://stackoverflow.com/questions/9719003/spinwait-vs-sleep-waiting-which-one-to-use
+    Spin-waiting with yielding or blocking will keep CPU a core busy. In this case, without them will be more efficient
+
+Q10: #https://www.quora.com/How-is-initial-value-of-semaphore-decided
+     We only have 5 threads, so the initial value of semaphore should be 5.
+     If it is too big, it will not memory efficient.
+
