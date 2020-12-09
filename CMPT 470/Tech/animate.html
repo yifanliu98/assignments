@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animate Effect in JQuery</title>
+	<link rel="stylesheet" type="text/css" href="style-animate.css">
+</head>
+<body>
+	<button id="b1">Start Animate Effects 1</button>
+	<div id="d1"> </div>
+	<button id="b2">Start Animate Effects 2</button>
+	<div id="d2">
+		<div id="d3">  </div>		
+	</div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#b1").click(function() {
+			var div = $("#d1")
+			start();
+			function start() {
+				div.animate({
+					top:'150px',
+					width:'50px',
+					height:'50px'
+				}, 500)
+
+				div.animate({
+					left:'150px',
+					width:'100px',
+					height:'100px'
+				}, 500)
+
+				div.animate({
+					top:'50px',
+					width:'50px',
+					height:'50px'
+				}, 500)
+
+				div.animate({
+					left:'0px',
+					width:'100px',
+					height:'100px'
+				}, 500, start)
+			}
+		})
+	});
+</script>
+
+<script>
+$(document).ready(function(){
+	$("#b2").click(function(){
+    	$("#d3").animate({width: "400px"}, 5000);
+  	});
+});
+</script>
+</head>
+<body>
+
+
+</html>

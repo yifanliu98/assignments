@@ -1,0 +1,15 @@
+Julia vs. Python
+Both are open source
+Python is OOP; Juliia has both object-oriented and functional programming
+python is dynamically typed; Julia is also dynamically typed but you can specify types beforehand
+
+
+Julia is compipled at JIT or at runtime using the LLVM framework. 
+This is where Julia truly beats Python: speed.
+
+Binary Search 
+Binary search in Julia is much more faster
+I did a benchmark on an array with a size of 500000 and 1000000 times calls for binary search.
+Julia just use 0.062137 seconds (2 allocations: 3.815 MiB)
+But, Python needs Time:  8.1868795s
+

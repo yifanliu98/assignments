@@ -1,0 +1,38 @@
+body {
+	background-color: #228;
+}
+
+ul#menu {
+    columns: 5;
+	list-style-type: none;
+	color: white;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+ul#menu>li>a {
+	color: black;
+	font-size: 1.5em;
+	background-color: #bbb;
+	padding: 5px;
+}
+
+ul#menu>li.current>a {
+	background-color: white;
+}
+
+
+h1 {
+	background: white;
+	text-align: center;
+}
+
+div {
+	margin-top: 0;
+	background-color: white;
+	padding: 10px;
+}
+
+h2#first {
+	margin-top: 0;
+}

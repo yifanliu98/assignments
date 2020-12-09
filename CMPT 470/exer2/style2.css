@@ -1,0 +1,23 @@
+h1 {
+	display: inline;
+}
+
+ul#menu {
+	list-style-type: none;
+	background: #64a;
+	padding-left: 10px;
+	float: right;
+	margin: 0;
+}
+
+ul#menu>li {
+	background: #66c;
+	margin: 1px;
+	padding-right: 50px;
+}
+
+ul#menu>li>a {
+	color: white;
+	font-size: 1.3em;
+	text-decoration: none;
+}

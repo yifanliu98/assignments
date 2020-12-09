@@ -1,0 +1,8 @@
+Development DB
+SQLite
+embedded DB
+
+Object-Relational Mapping
+
+MVC
+model-view-controller architecture

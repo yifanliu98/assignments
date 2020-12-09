@@ -1,0 +1,68 @@
+HTTP/1.1 200 OK
+Date: Sat, 30 May 2020 20:37:37 GMT
+Server: Apache
+Last-Modified: Tue, 01 Sep 2015 07:00:00 GMT
+Accept-Ranges: bytes
+Content-Length: 225
+Cache-Control: max-age=3600
+Expires: Sat, 30 May 2020 21:37:37 GMT
+box: b3 D=143625 t=1590871057008321
+Access-Control-Allow-Origin: *
+Connection: close
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple HTML Page</title>
+  </head>
+  <body>
+  <p>This is a simple HTML page for use as an example in a CMPT 470 exercise.</p>
+  </body>
+</html>
+
+
+After adding an If-modified-since header to the request, the status code for the server's response is:
+
+HTTP/1.1 304 Not Modified
+Date: Sat, 30 May 2020 20:41:21 GMT
+Server: Apache
+Connection: close
+Expires: Sat, 30 May 2020 21:41:21 GMT
+Cache-Control: max-age=3600
+
+The response has no any body of the website. It shows if the website has been modified after the given date.
+
+
+# Without teh trailing slash
+
+HTTP/1.1 301 Moved Permanently
+Date: Sat, 30 May 2020 21:07:39 GMT
+Server: Apache
+Location: http://www.sfu.ca/~ggbaker/470e3/
+Cache-Control: max-age=3600
+Expires: Sat, 30 May 2020 22:07:39 GMT
+Content-Length: 301
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.sfu.ca/~ggbaker/470e3/">here</a>.</p>
+<hr>
+<address>Apache Server at www.sfu.ca Port 80</address>
+</body></html>
+
+The URL without a trailing slash at the end used to mean that the URL was a file. It will reponse with an error 301 message if the URL was a folder or directory.
+
+# Command-Line Requests
+GET -esS will display response headers, status code, status chain and the HTML body.
+curl with -I only shows document information
+curl with -esS shows HTML body
+
+I promise I played with the developer tools
+

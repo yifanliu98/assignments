@@ -1,0 +1,29 @@
+Fibonacci Speed
+
+Everytime we calculate Fn = Fn-1 + Fn-2, but Fn-1 and Fn-2 are unknown. Then we need to recursively calculate Fn-1 and Fn-2 until F0 and F1. That is we have a great amount F to be calculated. 
+
+In addition, in same points, Fn need to be calculated many times. For example, we want F5, then F3 and F4 should be calculated. 
+	F3 = F1 + F2
+	F4 = F2 + F3
+Meanwhile, F3 is calculated at some points but is not stored. So, recalculation needed to get F4.
+
+Therefore, fib function takes so long to do simple calculations.
+
+Something Else
+
+The things function generates the infinite fibonacci sequence. It is very fast. The things function generates the fibonacci sequence starting from F0 and F1. And store value of F0 and F1. When it deals with F2 = F0 + F1, all two numbers are known. Recursively, it will generate the fibonacci sequence Fn.
+
+iterator    things                  zipWith (+) things (tail things)
+   0        [0,1]                   [1]
+   1        [0,1,1]                 [1,2]
+   2        [0,1,1,2]               [1,2,3]
+   3        [0,1,1,2,3]             [1,2,3,5]
+   4        [0,1,1,2,3,5]           [1,2,3,5,8]
+   5        [0,1,1,2,3,5,8]         [1,2,3,5,8,13]
+   ....
+
+At the beginning, things is [0,1].
+In iterator n, zipWith (+) things (tail things) is generate a list from F3 to Fn+3. Then add 0:1 before the list.
+When Fn-1 and Fn-2 are known, Fn can be calculated immediately.
+
+Calculating things!!33 and things!!45 is so much faster than in the list fibs. Because the values of F31, F32, F43, and F44 are calculated and stored previously.

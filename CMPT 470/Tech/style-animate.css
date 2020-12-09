@@ -1,0 +1,25 @@
+
+#d1 {
+    margin: 50px;
+    padding: 10px;
+    top: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    padding: 20px;
+}
+
+#d2 {
+    margin-top: 400px;
+    margin-left: 50px;
+    border: 1px solid green;
+    width: 400px;
+    height: 50px;
+}
+
+#d3 {
+    background-color: green;
+    height: 50px;
+    width: 1px;
+}

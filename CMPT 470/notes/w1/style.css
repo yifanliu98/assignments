@@ -1,0 +1,50 @@
+p {
+	color: blue;
+	margin-top: 2em;
+
+}
+
+.other-lang {
+	font-style: italic;
+}
+
+div.code-block {
+	white-space: pre;
+	font-family: monospace;
+}
+
+ol#assignment-steps {
+	list-style-type: upper-alpha;
+}
+
+ol>li {
+	list-style-type: upper-alpha;
+}
+
+a:active {
+	color: pink;
+}
+
+:lang(cn) {
+	font-style: italic;
+	color: pink;
+}
+
+p::first-letter {
+	font-size: 150%;
+	color: red;
+}
+
+h2 {
+	margin-top: 2em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	background-color: grey;
+	border: thick red solid;
+	padding: 1em 0.5em;
+}
+
+h2+* {
+	margin-top: 0;
+	padding-top: 0;
+}

@@ -1,0 +1,114 @@
+Monads
+
+
+
+Conditionals
+
+guarded expressions
+mySignum x
+  | x>0         = 1
+  | x<0         = -1
+  | otherwise   = 0
+
+
+ case expression 
+ wordWithX n = (case n of
+  1 -> "one"
+  2 -> "two"
+  3 -> "three"
+  _ -> "???") ++ "X"
+
+
+
+takeWhile even [2,4,6,7,10,12]	[2,4,6]
+dropWhile even [2,4,6,7,10,12]	[7,10,12]
+splitAt 2 [10,20,30,40,50]		([10,20],[30,40,50])
+map (gcd 10) [3,4,5,6]			[1,2,5,2]
+filter even [1..8]				[2,4,6,8]
+zip
+uncurry
+map (uncurry (+)) (zip [1,2,3] [4,5,6])
+fst snd
+
+
+Type Classes (=>)
+
+Eq  :  ==  /=
+Ord :  Eq and < >= min
+Num :  +  *  abs
+Fractional : Num and / recip
+Show : to string
+Enum : has previous or next elements (succ)
+
+
+Language Choice
+	popularity
+	tools : windows IDE
+	libraries / toolkits
+	syntax : ; or indenting
+	implementation : how to write compilers
+
+
+A compiler is a program that translateds a program from one representation to another. This is source code to machine code.
+higher-level -> lower-level
+
+Manchine code : instructions for the processor. The target could be something other than machine code
+
+Assembly language : more human-readable but almost one-to-one with manchine code
+
+Source-to-source translation (transpiling) : converting between higher-level representations
+
+interpreter : a piece of software that takes a program in some language (!= machine code) and executes it
+
+Just-in-time compilation
+
+LLVM compiler
+
+Duck Typing
+Dynamic typing is slow but flexible
+
+strongly typed
+  C and Java
+
+mutable/immutable data
+mutable obj/value: can be modified after initialzing
+  easy to work with
+  collection
+immutable
+  e.g. Integer in Java, C#
+  can be changed by assigning a brand new obj
+  dictionary/map/hash table keys
+  as an argument
+  sharing between threads 
+  tuple in python
+
+ways to enforce mutability
+  private
+  const
+
+Memory Management
+  Static
+    strings
+  Stack
+    function params and function-local variables
+  Heap
+    dynamically-allocated objs
+    mallocc in c
+    new in c++, java, c#
+    all objs in python, ruby
+
+memory leak
+
+garbage collection
+  reference counting: delete when decreasing to zero reference to the obj
+  tracing: delete evreything is not reachable from references
+
+C++ unique_ptr
+  it will delete the obj it refers to automatically
+
+First-Class Fucntions
+  functions can be treated like value
+  be pass as argument
+  stored in a list
+ 
+Closures

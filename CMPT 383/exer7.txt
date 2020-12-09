@@ -1,0 +1,28 @@
+Language Description #1
+
+1. C++11
+2. Object-oriented programming, procedural programming, generic programming, compile-time programming
+3. Compiled GCC
+4. Static types, Static binding
+5. Weak typing. By type-casting, an integer can be represented as a float. 
+6. Manual memory management
+7. C++ has first-class functions -> lambda expressions
+   C++ has closures
+8. C++11 acknowledged the existence of multi-threaded programs and the later standards also brought some improvements to deal with concurrent/parallel programming 
+   # https://www.c-sharpcorner.com/article/programming-concurrency-in-cpp-part-1/
+
+Language Description #2
+
+1. Java 9
+2. Imperative, procedural, object-oriented, functional, declarative programming
+3. Bytecode compiled
+4. Static types, Static binding
+5. Strong typing
+6. Garbage collected
+7. Java 9 has first-class functions -> lambda expression
+   Java 9 has closures
+8. Package java.util.concurrent
+   Utility classes commonly useful in concurrent programming
+   #https://docs.oracle.com/javase/9/docs/api/java/util/concurrent/package-summary.html
+   Java provides numerous built-in patterns for parallel programming patterns, including multithreading, Remote Method Invocation (RMI), Sockets, and message passing or shared memory designs
+   #https://subscription.packtpub.com/book/application_development/9781787126992/5/ch05lvl1sec23/java-support-for-parallel-programming-models

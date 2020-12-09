@@ -1,0 +1,8 @@
+< &lt;
+> &gt;
+" &quot;
+& &amp;
+' &apos;
+
+Input & Output
+SQL Injection 

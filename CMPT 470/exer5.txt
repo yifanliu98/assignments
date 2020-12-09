@@ -1,0 +1,5 @@
+Insufficient Authentication
+When the user search go for a URL https://ggbaker.ca/security/friends/user2/ with the target username, the current user can browse his/her friend list without checking the permissions of the current user. Even if the target user has not shared his/her contact list with the current user.
+
+XSS possibility
+When adding a new friend, the user can send malicious codes through "Notes" part in the "New Person". An attacker can use XSS to send a malicious script to an unsuspecting user. The end user’s browser has no way to know that the script should not be trusted, and will execute the script.
